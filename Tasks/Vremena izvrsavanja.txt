@@ -1,0 +1,24 @@
+﻿30 ms bez konverzije
+34 ms
+39 ms
+34 ms
+53 ms za novi fajl
+40 ms
+40 ms
+33 ms
+39 ms
+
+---
+481 ms
+481 ms
+490 ms
+470 ms
+496 ms
+451 ms
+505 ms
+---
+
+sa konverzijom
+369 ms
+344 ms
+
