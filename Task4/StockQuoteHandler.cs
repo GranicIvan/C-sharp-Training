@@ -1,7 +1,7 @@
-﻿using Task3.Model;
-using static Task3.Model.Change;
+﻿using Task4.Model;
+using static Task4.Model.Change;
 
-namespace Task3
+namespace Task4
 {
     internal class StockQuoteHandler
     {

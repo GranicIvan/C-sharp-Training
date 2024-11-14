@@ -1,15 +1,24 @@
-﻿using System.ComponentModel;
-
-List<string> lista = new List<string>();
-
-lista.Add("Hello");
-lista.Add("World");
-lista.Add("!");
-lista.Add(null);
-lista.Add("Goodbye");
-
-
-foreach (string item in lista)
+﻿namespace Testing
 {
-    Console.WriteLine(item);
+    class Program
+    {
+        enum ChangeType
+        {
+            Up,
+            Down,
+            NoChange
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+
+
+
+
+          
+        }
+    }
 }
+
+

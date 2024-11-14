@@ -4,27 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Task3.Model;
+using Task4.Model;
 
-namespace Task3
+namespace Task4.Loaders
 {
-    internal class StockQuoteLoader
+    internal class StockQuoteFileLoader : StockQuoteLoader
     {
-        public List<StockQuote> ReadingData()
-        {            
+
+        public override List<StockQuote> ReadingData(string path)
+        {
 
             List<StockQuote> allDays = new List<StockQuote>();
 
-            var builder = new ConfigurationBuilder()
-                     .SetBasePath(Directory.GetCurrentDirectory())
-                     .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-
-            IConfigurationRoot configuration = builder.Build();
-
-            string filePath = configuration["StockData:DemoPath"];
-            Console.WriteLine("FILE PATH JE:" + filePath); //OVO OBRISI
-
-            using (StreamReader sr = new StreamReader(filePath))
+            using (StreamReader sr = new StreamReader(path))
             {
                 string line = sr.ReadLine(); //Skipping header line
 
@@ -63,5 +55,6 @@ namespace Task3
 
             return allDays;
         }
+
     }
 }
