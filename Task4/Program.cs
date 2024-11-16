@@ -26,8 +26,7 @@ namespace Tasks4
 
                 IConfigurationRoot configuration = builder.Build();
                 
-                string[] filePaths = configuration.GetSection("StockData:DemoPath").Get<string[]>();
-                
+                string[] filePaths = configuration.GetSection("StockData:DemoPath").Get<string[]>();                
 
                 Random random = new Random();
                 int index = random.Next(filePaths.Length);
@@ -36,7 +35,7 @@ namespace Tasks4
 
                 StockQuoteLoader loader;             
 
-                List < StockQuote > quotes = new List<StockQuote>();
+                List <StockQuote> quotes = new List<StockQuote>();
 
                 if (Uri.IsWellFormedUriString(path, UriKind.Absolute) ) 
                 {
@@ -46,10 +45,8 @@ namespace Tasks4
                 {                    
                     loader = new StockQuoteFileLoader();
                 }
-
-                quotes = loader.ReadingData(path);
-
-               
+                 
+                quotes = loader.ReadingData(path);               
 
                 var watch = System.Diagnostics.Stopwatch.StartNew();
 
@@ -58,7 +55,7 @@ namespace Tasks4
 
                 foreach (Change change in changes)
                 {
-                    change.Printing();
+                    change.Printing(); //OVDE TREBA DA BUDE LOGIKA ZA PRINTING A NE U CHANGE KLASI
                 }
 
                 watch.Stop();
