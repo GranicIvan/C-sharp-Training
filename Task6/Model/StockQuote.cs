@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task5.Model
+namespace Task6.Model
 {
     internal class StockQuote
     {
